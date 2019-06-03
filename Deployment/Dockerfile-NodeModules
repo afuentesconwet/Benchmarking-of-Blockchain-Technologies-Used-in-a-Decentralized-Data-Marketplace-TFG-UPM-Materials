@@ -1,0 +1,6 @@
+FROM node:8.11.4
+WORKDIR /AppV1
+COPY package.json /AppV1
+RUN npm install
+COPY ./AppV1/* /AppV1/
+CMD node app.js ; node dataApp.js
